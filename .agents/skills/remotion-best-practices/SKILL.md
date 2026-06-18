@@ -199,6 +199,36 @@ Start the Remotion Studio to preview a video:
 npx remotion studio
 ```
 
+## Restricted-network / sandbox environments (browser executable)
+
+In sandboxed environments (e.g. Claude Code on the web) the host `remotion.media`
+may be blocked by the network egress policy, so Remotion's automatic Chrome
+Headless Shell download fails with a `403 Host not in allowlist` error.
+
+Work around it by pointing Remotion at an already-installed Chromium via
+`--browser-executable`. Use the **`headless_shell`** binary (old-headless
+implementation) — the full `chrome` binary rejects Remotion's old-headless
+launch flags. A Playwright Chromium is commonly present at
+`/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell`:
+
+```bash
+CHROME=$(ls -d /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell | head -1)
+npx remotion render MyComp out/video.mp4 --browser-executable="$CHROME"
+npx remotion still   MyComp out/frame.png --frame=30 --browser-executable="$CHROME"
+```
+
+To make it permanent for a project, set it in `remotion.config.ts`:
+
+```ts
+import { Config } from "@remotion/cli/config";
+Config.setBrowserExecutable(
+  "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
+);
+```
+
+Alternatively, add `remotion.media` (and `remotion.dev`) to the environment's
+network allowlist to restore the standard auto-download path.
+
 ## Optional: one-frame render check
 
 You can render a single frame with the CLI to sanity-check layout, colors, or timing.  
