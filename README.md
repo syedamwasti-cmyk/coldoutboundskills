@@ -8,7 +8,7 @@ Open-source [Claude Code skills](https://docs.anthropic.com/en/docs/claude-code/
 
 ## What's in here
 
-29 skills organized in 5 tracks.
+29 skills organized in 5 tracks, plus a pre-built Remotion video skill (Track 6).
 
 **New to cold email? Start with `/cold-email-kickoff`.** It orchestrates ICP → lead magnet → campaign strategy → plan in one guided flow.
 
@@ -49,6 +49,9 @@ Open-source [Claude Code skills](https://docs.anthropic.com/en/docs/claude-code/
 - **`personalization-subagent-pattern`** — reusable pattern for per-lead Claude sub-agent personalization
 - **`deliverability-test-public`** — compare reply/bounce by inbox type
 - **`cold-email-weekly-rhythm`** — Monday/Wednesday/Friday operational playbook — what separates hobbyist from top-1%
+
+### Track 6 — Media (add-on)
+- **`remotion-best-practices`** — pre-built [Remotion](https://www.remotion.dev) skill for making videos programmatically in React (animations, captions, audio, transitions). Useful for video lead magnets, demos, and personalized outreach clips. Installed from [`remotion-dev/skills`](https://github.com/remotion-dev/skills) via `npx skills add remotion-dev/skills`; lives in `.agents/skills/` (pinned in `skills-lock.json`).
 
 ## Getting started
 
