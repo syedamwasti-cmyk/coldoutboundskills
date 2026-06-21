@@ -2,13 +2,13 @@
 
 Open-source [Claude Code skills](https://docs.anthropic.com/en/docs/claude-code/skills) for cold email infrastructure, lead sourcing, copywriting, and operations. Built by [GrowthEngineX](https://growthengine-x.com) from patterns across 1,000+ real B2B campaigns.
 
-28 skills that work together. Clone the repo, bring your API keys, point Claude Code at it, go from zero to a running campaign.
+29 skills that work together. Clone the repo, bring your API keys, point Claude Code at it, go from zero to a running campaign.
 
 **New here?** Invoke `/cold-email-kickoff` — it's the guided entry point that orchestrates ICP + lead magnet + strategy + plan in one flow.
 
 ## What's in here
 
-29 skills organized in 5 tracks.
+30 skills organized in 5 tracks.
 
 **New to cold email? Start with `/cold-email-kickoff`.** It orchestrates ICP → lead magnet → campaign strategy → plan in one guided flow.
 
@@ -18,6 +18,7 @@ Open-source [Claude Code skills](https://docs.anthropic.com/en/docs/claude-code/
 - **`lead-magnet-brainstorm`** — figure out what to offer for free in your cold emails
 - **`campaign-strategy`** — generates 15-25 campaign ideas with AI strategies + value props
 - **`campaign-copywriting`** — stepwise copy writer (direction → subject → body → final YAML)
+- **`cult-os-workshop`** — guided brand-culture workshop (invoke `CultOS`); applies Jared T. Ross's 7-layer Cult Operating System and writes a Blueprint
 
 ### Track 2 — Infrastructure
 - **`zapmail-domain-setup-public`** — buy `.com`/`.co` domains on Dynadot, provision inboxes on Zapmail
