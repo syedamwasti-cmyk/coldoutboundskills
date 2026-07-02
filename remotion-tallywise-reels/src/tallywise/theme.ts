@@ -38,16 +38,17 @@ export const colors = {
   white: "#ffffff",
 } as const;
 
-// 16:9 landscape reel format.
+// 9:16 vertical reel format.
 export const VIDEO = {
-  width: 1920,
-  height: 1080,
+  width: 1080,
+  height: 1920,
   fps: 30,
 } as const;
 
-// Safe-area padding per the video-layout rules, tuned for the wide frame.
+// Safe-area padding per the video-layout rules (>=80px sides for 1080 wide,
+// scaled up for the taller vertical frame).
 export const SAFE = {
-  x: 140,
-  top: 96,
-  bottom: 96,
+  x: 96,
+  top: 140,
+  bottom: 160,
 } as const;
