@@ -8,10 +8,9 @@ built with [Remotion](https://remotion.dev) using the
 need clarity on their accounting and a plan to scale. Industry-agnostic — no
 construction-specific framing — so the set works across the whole ICP.
 
-**Format:** 1080 × 1920, 30 fps, ~18s each. Ink-dominant palette with a green
-accent, Montserrat headers, Inter body — straight from the TallyWise brand voice
-guide. Every reel carries an **AI-generated** disclosure chip (brand rule: AI
-teaches, real Abid testifies — these are teaching reels, so they're labelled).
+**Format:** 1920 × 1080 (16:9 landscape), 30 fps, ~18s each. Ink-dominant palette
+with a green accent, Montserrat headers, Inter body — straight from the TallyWise
+brand voice guide.
 
 ## The five reels
 

@@ -2,7 +2,6 @@ import React from "react";
 import { AbsoluteFill, interpolate, Sequence, useCurrentFrame } from "remotion";
 import { colors, inter, montserrat } from "../tallywise/theme";
 import {
-  AIBadge,
   Backdrop,
   Kicker,
   RiseLine,
@@ -151,7 +150,6 @@ export const RevenueMarginCash: React.FC = () => {
       <Sequence from={340}>
         <Outro line="Revenue is vanity. Margin is sanity. Cash is survival." />
       </Sequence>
-      <AIBadge />
     </AbsoluteFill>
   );
 };

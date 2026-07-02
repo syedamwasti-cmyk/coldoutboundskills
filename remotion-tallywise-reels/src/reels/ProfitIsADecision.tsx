@@ -2,7 +2,6 @@ import React from "react";
 import { AbsoluteFill, interpolate, Sequence } from "remotion";
 import { colors, inter, montserrat } from "../tallywise/theme";
 import {
-  AIBadge,
   Backdrop,
   Kicker,
   RiseLine,
@@ -139,7 +138,6 @@ export const ProfitIsADecision: React.FC = () => {
           sub="Set the number first. We'll build the plan that hits it."
         />
       </Sequence>
-      <AIBadge />
     </AbsoluteFill>
   );
 };

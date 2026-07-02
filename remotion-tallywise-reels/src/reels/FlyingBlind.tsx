@@ -2,7 +2,6 @@ import React from "react";
 import { AbsoluteFill, interpolate, Sequence } from "remotion";
 import { colors, inter, montserrat } from "../tallywise/theme";
 import {
-  AIBadge,
   Backdrop,
   Kicker,
   RiseLine,
@@ -135,7 +134,6 @@ export const FlyingBlind: React.FC = () => {
           sub="Get the one-page Cash Flow Dashboard we build for owners. Eyes open."
         />
       </Sequence>
-      <AIBadge />
     </AbsoluteFill>
   );
 };

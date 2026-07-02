@@ -2,7 +2,6 @@ import React from "react";
 import { AbsoluteFill, interpolate, Sequence, useCurrentFrame } from "remotion";
 import { colors, inter, montserrat } from "../tallywise/theme";
 import {
-  AIBadge,
   Backdrop,
   Kicker,
   RiseLine,
@@ -198,7 +197,6 @@ export const MoneyInBank: React.FC = () => {
           sub="Confusing the two is how good businesses go broke — quietly. Let's find your real number."
         />
       </Sequence>
-      <AIBadge />
     </AbsoluteFill>
   );
 };

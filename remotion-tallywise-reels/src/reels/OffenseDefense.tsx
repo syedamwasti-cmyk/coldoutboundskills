@@ -2,7 +2,6 @@ import React from "react";
 import { AbsoluteFill, interpolate, Sequence, useCurrentFrame } from "remotion";
 import { colors, inter, montserrat } from "../tallywise/theme";
 import {
-  AIBadge,
   Backdrop,
   EASE_OUT,
   Kicker,
@@ -147,7 +146,6 @@ export const OffenseDefense: React.FC = () => {
           sub="They save you money once a year. We help you make it all year."
         />
       </Sequence>
-      <AIBadge />
     </AbsoluteFill>
   );
 };
