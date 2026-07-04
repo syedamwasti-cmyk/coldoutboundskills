@@ -1,10 +1,13 @@
 import React from "react";
 import {
   AbsoluteFill,
+  Audio,
   interpolate,
   random,
   Sequence,
+  staticFile,
   useCurrentFrame,
+  useVideoConfig,
 } from "remotion";
 import { colors, inter, montserrat } from "../tallywise/theme";
 import {
@@ -328,9 +331,29 @@ const OutroScene: React.FC = () => {
   );
 };
 
+/** Light background music, low in the mix with a soft in/out fade. */
+const BackgroundMusic: React.FC = () => {
+  const { durationInFrames, fps } = useVideoConfig();
+  const fade = 0.6 * fps;
+  return (
+    <Audio
+      src={staticFile("audio/light-bg.mp3")}
+      volume={(f) =>
+        interpolate(
+          f,
+          [0, fade, durationInFrames - 2 * fps, durationInFrames],
+          [0, 0.5, 0.5, 0],
+          { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
+        )
+      }
+    />
+  );
+};
+
 export const IndependenceDay: React.FC = () => {
   return (
     <AbsoluteFill>
+      <BackgroundMusic />
       <Backdrop />
       <StarField />
       <Sequence durationInFrames={120}>
