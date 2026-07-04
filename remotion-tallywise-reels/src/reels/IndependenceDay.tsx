@@ -331,18 +331,18 @@ const OutroScene: React.FC = () => {
   );
 };
 
-/** Light background music, low in the mix with a soft in/out fade. */
+/** Light patriotic march bed, low in the mix with a soft in/out fade. */
 const BackgroundMusic: React.FC = () => {
   const { durationInFrames, fps } = useVideoConfig();
-  const fade = 0.6 * fps;
+  const fade = 0.4 * fps;
   return (
     <Audio
-      src={staticFile("audio/light-bg.mp3")}
+      src={staticFile("audio/patriotic.mp3")}
       volume={(f) =>
         interpolate(
           f,
-          [0, fade, durationInFrames - 2 * fps, durationInFrames],
-          [0, 0.5, 0.5, 0],
+          [0, fade, durationInFrames - 1.5 * fps, durationInFrames],
+          [0, 0.42, 0.42, 0],
           { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
         )
       }
