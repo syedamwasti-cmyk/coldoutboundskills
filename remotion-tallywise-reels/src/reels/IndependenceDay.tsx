@@ -63,6 +63,60 @@ const StarField: React.FC = () => {
   return <AbsoluteFill>{stars}</AbsoluteFill>;
 };
 
+/** A single firework burst — particles radiate out from (cx,cy) then fade.
+ *  Deterministic (seeded), interpolate-driven, no CSS animation. */
+const Firework: React.FC<{
+  cx: number;
+  cy: number;
+  start: number;
+  color: string;
+  radius?: number;
+  count?: number;
+}> = ({ cx, cy, start, color, radius = 260, count = 22 }) => {
+  const frame = useCurrentFrame();
+  const local = frame - start;
+  if (local < 0 || local > 46) return null;
+
+  const grow = interpolate(local, [0, 26], [0, 1], {
+    easing: EASE_OUT,
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const fade = interpolate(local, [0, 5, 30, 44], [0, 1, 1, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const gravity = interpolate(local, [0, 44], [0, 90]);
+
+  return (
+    <AbsoluteFill style={{ opacity: fade }}>
+      {new Array(count).fill(0).map((_, i) => {
+        const angle = (i / count) * Math.PI * 2;
+        const jitter = 0.7 + random(`fw${cx}${i}`) * 0.5;
+        const r = radius * grow * jitter;
+        const x = cx + Math.cos(angle) * r;
+        const y = cy + Math.sin(angle) * r + gravity * grow;
+        const dot = 6 + random(`d${cx}${i}`) * 6;
+        return (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              left: x,
+              top: y,
+              width: dot,
+              height: dot,
+              borderRadius: 999,
+              backgroundColor: color,
+              boxShadow: `0 0 12px ${color}`,
+            }}
+          />
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
 /** Small festive date tag. */
 const HolidayTag: React.FC<{ delay?: number }> = ({ delay = 0 }) => {
   const p = useEnter(delay, 12);
@@ -199,8 +253,14 @@ const OutroScene: React.FC = () => {
     extrapolateRight: "clamp",
   });
   return (
-    <SafeColumn justify="center" align="flex-start" gap={38}>
-      <Kicker delay={2}>Eyes open</Kicker>
+    <>
+      {/* Fireworks celebrate the payoff — layered behind the copy. */}
+      <Firework cx={820} cy={430} start={8} color={colors.green} radius={280} />
+      <Firework cx={280} cy={300} start={22} color={colors.white} radius={220} />
+      <Firework cx={880} cy={720} start={40} color={festiveRed} radius={250} />
+      <Firework cx={520} cy={360} start={58} color={colors.green} radius={300} />
+      <SafeColumn justify="center" align="flex-start" gap={38}>
+        <Kicker delay={2}>Eyes open</Kicker>
       <RiseLine delay={8} size={108}>
         Run your business
       </RiseLine>
@@ -232,8 +292,9 @@ const OutroScene: React.FC = () => {
         }}
       >
         <LogoLockup size={58} />
-      </div>
-    </SafeColumn>
+        </div>
+      </SafeColumn>
+    </>
   );
 };
 
