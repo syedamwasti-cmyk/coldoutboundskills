@@ -16,6 +16,10 @@ import {
   OffenseDefense,
   OFFENSE_DEFENSE_DURATION,
 } from "./reels/OffenseDefense";
+import {
+  IndependenceDay,
+  INDEPENDENCE_DAY_DURATION,
+} from "./reels/IndependenceDay";
 
 // TallyWise education reels — vertical 1080x1920 @ 30fps.
 // Audience: owner-led SMBs, ~$1M–$10M revenue, needing accounting + scaling clarity.
@@ -55,6 +59,12 @@ export const RemotionRoot: React.FC = () => {
         id="OffenseDefense"
         component={OffenseDefense}
         durationInFrames={OFFENSE_DEFENSE_DURATION}
+        {...common}
+      />
+      <Composition
+        id="IndependenceDay"
+        component={IndependenceDay}
+        durationInFrames={INDEPENDENCE_DAY_DURATION}
         {...common}
       />
     </>

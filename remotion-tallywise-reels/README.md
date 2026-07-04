@@ -24,6 +24,7 @@ lands on `Book a Clarity Session`.
 | 03 | `FlyingBlind` | "You crossed $1M on hustle — you won't cross $10M the same way" → the 5-number Monday dashboard → **You can't scale what you can't see.** | 1, 4 |
 | 04 | `ProfitIsADecision` | Most owners meet their profit in March → decide it, price to it, check it weekly → **Profit is a decision, not a year-end surprise.** | 6 |
 | 05 | `OffenseDefense` | Old way → eyes open, four flips → **Your CPA plays defense. We play offense.** | 11 |
+| 06 | `IndependenceDay` | Warmup / 4th of July: "declare independence from flying blind" → three self-evident truths → **Run your business like you own it.** | 1 |
 
 > Reel 02 uses an **illustrative** example (labelled on-screen). Per the TallyWise
 > hard rule, no real client or specific result is invented.
