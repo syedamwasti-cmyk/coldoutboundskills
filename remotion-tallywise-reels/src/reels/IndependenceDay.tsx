@@ -278,11 +278,41 @@ const OutroScene: React.FC = () => {
           opacity: useEnter(24, 16),
         }}
       >
-        This 4th, trade the guessing for clarity. We'll look at your real numbers
-        — you'll leave knowing your next move.
+        This 4th, trade the guessing for clarity. Get the free Cash Flow
+        Dashboard we build for owners — your real numbers on one page.
       </div>
-      <div style={{ marginTop: 22 }}>
-        <CTAButton delay={30} />
+      <div
+        style={{
+          marginTop: 22,
+          display: "flex",
+          flexDirection: "column",
+          gap: 18,
+        }}
+      >
+        <CTAButton delay={30} label="Free Cash Flow Dashboard" />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 14,
+            opacity: useEnter(40, 14),
+            paddingLeft: 8,
+          }}
+        >
+          <span style={{ fontSize: 34 }}>👇</span>
+          <span
+            style={{
+              fontFamily: montserrat,
+              fontWeight: 700,
+              fontSize: 34,
+              letterSpacing: 2,
+              textTransform: "uppercase",
+              color: colors.green,
+            }}
+          >
+            Link in bio
+          </span>
+        </div>
       </div>
       <div
         style={{
