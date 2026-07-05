@@ -119,11 +119,11 @@ export const Kicker: React.FC<{ children: React.ReactNode; delay?: number }> = (
   );
 };
 
-/** TallyWise wordmark with the "balance" mark. */
+/** Official TallyWise lockup: lightbulb-$ mark + wordmark + tagline. */
 export const LogoLockup: React.FC<{ size?: number }> = ({ size = 54 }) => {
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: size * 0.34 }}>
-      <BalanceMark size={size * 1.16} />
+    <div style={{ display: "flex", alignItems: "center", gap: size * 0.42 }}>
+      <TallyWiseMark height={size * 1.95} bg={colors.ink} />
       <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
         <span
           style={{
@@ -134,17 +134,17 @@ export const LogoLockup: React.FC<{ size?: number }> = ({ size = 54 }) => {
             letterSpacing: -0.5,
           }}
         >
-          Tally<span style={{ color: colors.green }}>Wise</span>
+          TallyWise
         </span>
         <span
           style={{
-            fontFamily: inter,
-            fontWeight: 500,
+            fontFamily: montserrat,
+            fontWeight: 700,
             fontSize: size * 0.3,
-            color: colors.concreteMute,
-            letterSpacing: 3,
+            color: colors.green,
+            letterSpacing: size * 0.09,
             textTransform: "uppercase",
-            marginTop: size * 0.16,
+            marginTop: size * 0.18,
           }}
         >
           Balancing Success
@@ -154,37 +154,73 @@ export const LogoLockup: React.FC<{ size?: number }> = ({ size = 54 }) => {
   );
 };
 
-/** Simple balance-scale glyph drawn as SVG. */
-export const BalanceMark: React.FC<{ size?: number }> = ({ size = 64 }) => {
+/**
+ * TallyWise brand mark — a rayed lightbulb enclosing a $ coin.
+ * `bg` fills the knockout areas (the glass interior + the $) so the mark
+ * reads correctly on whatever background it sits on.
+ */
+export const TallyWiseMark: React.FC<{ height?: number; bg?: string }> = ({
+  height = 120,
+  bg = colors.ink,
+}) => {
+  const cx = 60;
+  const cy = 52;
+  const rays = [-100, -75, -50, -25, 0, 25, 50, 75, 100].map((deg) => {
+    const a = (deg * Math.PI) / 180;
+    const dx = Math.sin(a);
+    const dy = -Math.cos(a);
+    return {
+      x1: cx + dx * 37,
+      y1: cy + dy * 37,
+      x2: cx + dx * 50,
+      y2: cy + dy * 50,
+    };
+  });
   return (
     <svg
-      width={size}
-      height={size}
-      viewBox="0 0 64 64"
+      height={height}
+      width={height * (120 / 140)}
+      viewBox="0 0 120 140"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect
-        x="4"
-        y="4"
-        width="56"
-        height="56"
-        rx="15"
+      {/* rays */}
+      {rays.map((r, i) => (
+        <line
+          key={i}
+          x1={r.x1}
+          y1={r.y1}
+          x2={r.x2}
+          y2={r.y2}
+          stroke={colors.green}
+          strokeWidth={7}
+          strokeLinecap="round"
+        />
+      ))}
+      {/* glass (open outline) */}
+      <circle cx={cx} cy={cy} r={30} stroke={colors.green} strokeWidth={9} />
+      {/* base */}
+      <path d="M47 79 L73 79 L68 92 L52 92 Z" fill={colors.green} />
+      <rect x={49} y={92} width={22} height={8} rx={4} fill={colors.green} />
+      <rect x={52} y={103} width={16} height={8} rx={4} fill={colors.green} />
+      <path
+        d="M55 114 L65 114 L63 123 Q60 126 57 123 Z"
         fill={colors.green}
       />
-      <g
-        stroke={colors.ink}
-        strokeWidth="3.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
+      {/* $ coin: green disc with knockout dollar sign */}
+      <circle cx={cx} cy={49} r={17} fill={colors.green} />
+      <text
+        x={cx}
+        y={50}
+        textAnchor="middle"
+        dominantBaseline="central"
+        fontFamily={montserrat}
+        fontWeight={800}
+        fontSize={26}
+        fill={bg}
       >
-        <path d="M32 15 L32 46" />
-        <path d="M16 22 L48 22" />
-        <path d="M16 22 L11 34 L21 34 Z" fill={colors.ink} />
-        <path d="M48 22 L43 34 L53 34 Z" fill={colors.ink} />
-        <path d="M24 49 L40 49" />
-      </g>
+        $
+      </text>
     </svg>
   );
 };
