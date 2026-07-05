@@ -1,6 +1,6 @@
 import React from "react";
 import { interpolate } from "remotion";
-import { colors, inter } from "./theme";
+import { colors, inter, montserrat } from "./theme";
 import {
   CTAButton,
   Kicker,
@@ -16,9 +16,9 @@ import {
  */
 export const Outro: React.FC<{ line: string; sub?: string }> = ({
   line,
-  sub = "We'll look at your real numbers — you'll leave knowing your next move.",
+  sub = "Get the free Cash Flow Dashboard we build for owners — your real numbers on one page.",
 }) => {
-  const logoP = useEnter(40, 16);
+  const logoP = useEnter(46, 16);
   return (
     <SafeColumn justify="center" align="flex-start" gap={40}>
       <Kicker delay={2}>Same side of the table</Kicker>
@@ -38,8 +38,38 @@ export const Outro: React.FC<{ line: string; sub?: string }> = ({
       >
         {sub}
       </div>
-      <div style={{ marginTop: 24 }}>
-        <CTAButton delay={30} />
+      <div
+        style={{
+          marginTop: 24,
+          display: "flex",
+          flexDirection: "column",
+          gap: 18,
+        }}
+      >
+        <CTAButton delay={30} label="Free Cash Flow Dashboard" />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 14,
+            opacity: useEnter(40, 14),
+            paddingLeft: 8,
+          }}
+        >
+          <span style={{ fontSize: 34 }}>👇</span>
+          <span
+            style={{
+              fontFamily: montserrat,
+              fontWeight: 700,
+              fontSize: 34,
+              letterSpacing: 2,
+              textTransform: "uppercase",
+              color: colors.green,
+            }}
+          >
+            Link in bio
+          </span>
+        </div>
       </div>
       <div
         style={{
