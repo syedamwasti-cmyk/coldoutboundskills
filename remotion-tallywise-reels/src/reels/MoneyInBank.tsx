@@ -1,5 +1,13 @@
 import React from "react";
-import { AbsoluteFill, interpolate, Sequence, useCurrentFrame } from "remotion";
+import {
+  AbsoluteFill,
+  Audio,
+  interpolate,
+  Sequence,
+  staticFile,
+  useCurrentFrame,
+  useVideoConfig,
+} from "remotion";
 import { colors, inter, montserrat } from "../tallywise/theme";
 import {
   Backdrop,
@@ -23,11 +31,13 @@ const CLAIMS = [
 
 const HookScene: React.FC = () => {
   const frame = useCurrentFrame();
-  const count = interpolate(frame, [8, 40], [0, 284000], {
+  // Reveals are snapped to the track's 94 BPM beat grid (frames 0,19,38,57,77…).
+  const count = interpolate(frame, [8, 38], [0, 284000], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const strike = interpolate(frame, [64, 78], [0, 100], {
+  // strike slams shut on the downbeat at frame 77
+  const strike = interpolate(frame, [58, 77], [0, 100], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -60,7 +70,7 @@ const HookScene: React.FC = () => {
           }}
         />
       </div>
-      <RiseLine delay={20} size={70} color={colors.concreteMute}>
+      <RiseLine delay={19} size={70} color={colors.concreteMute}>
         “We’re good this month.”
       </RiseLine>
       <div
@@ -69,7 +79,7 @@ const HookScene: React.FC = () => {
           fontWeight: 800,
           fontSize: 58,
           color: colors.green,
-          opacity: useEnter(80, 14),
+          opacity: useEnter(96, 14),
         }}
       >
         Are you though?
@@ -80,7 +90,8 @@ const HookScene: React.FC = () => {
 
 const ClaimRow: React.FC<{ i: number; running: number }> = ({ i, running }) => {
   const c = CLAIMS[i];
-  const p = useEnter(6 + i * 26, 14);
+  // each deduction drops on consecutive beats (local frames 5, 24, 43)
+  const p = useEnter(5 + i * 19, 12);
   return (
     <div
       style={{
@@ -124,7 +135,13 @@ const MathScene: React.FC = () => {
   const frame = useCurrentFrame();
   const total = CLAIMS.reduce((a, c) => a + c.amount, 0);
   const real = 284000 - total; // 39,000
-  const reveal = interpolate(frame, [96, 116], [0, 1], {
+  // the real number lands on the downbeat at local frame 120 (abs 230)
+  const reveal = interpolate(frame, [108, 120], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  // a little beat-punch as it hits
+  const pop = interpolate(frame, [116, 120, 128], [0.82, 1.08, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -162,6 +179,8 @@ const MathScene: React.FC = () => {
             fontWeight: 900,
             fontSize: 96,
             color: colors.green,
+            scale: String(pop),
+            display: "inline-block",
           }}
         >
           {money(real)}
@@ -181,9 +200,28 @@ const MathScene: React.FC = () => {
   );
 };
 
+/** Beat-synced music stripped from the uploaded clip (94 BPM, trimmed to the reel). */
+const SyncMusic: React.FC = () => {
+  const { durationInFrames, fps } = useVideoConfig();
+  return (
+    <Audio
+      src={staticFile("audio/reel2-sync.mp3")}
+      volume={(f) =>
+        interpolate(
+          f,
+          [0, 0.15 * fps, durationInFrames - 1.2 * fps, durationInFrames],
+          [0, 0.7, 0.7, 0],
+          { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
+        )
+      }
+    />
+  );
+};
+
 export const MoneyInBank: React.FC = () => {
   return (
     <AbsoluteFill>
+      <SyncMusic />
       <Backdrop />
       <Sequence durationInFrames={110}>
         <HookScene />
