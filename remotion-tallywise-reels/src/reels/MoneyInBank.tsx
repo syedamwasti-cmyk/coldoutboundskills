@@ -210,7 +210,7 @@ const SyncMusic: React.FC = () => {
         interpolate(
           f,
           [0, 0.15 * fps, durationInFrames - 1.2 * fps, durationInFrames],
-          [0, 0.7, 0.7, 0],
+          [0, 0.42, 0.42, 0],
           { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
         )
       }
