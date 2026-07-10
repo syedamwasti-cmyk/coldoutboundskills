@@ -11,7 +11,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-busy-1",
     title: "Busy All Year, Still Broke",
     chip: "Busy ≠ Profitable",
-    cover: {image: "busy-1.png", headline: [[{t: "Busy all year."}], [{t: "Still broke."}]]},
+    cover: {image: "busy-1.jpg", headline: [[{t: "Busy all year."}], [{t: "Still broke."}]]},
     slides: [
       {dur: 1, fontSize: 96, lines: [[{t: "Being booked solid"}], [{t: "is "}, {t: "not the same", g: true}], [{t: "as being paid."}]]},
       {dur: 1, fontSize: 92, lines: [[{t: "More revenue just"}], [{t: "bought you a bigger"}], [{t: "version of broke.", g: true}]]},
@@ -24,7 +24,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-bank",
     title: "Money In The Bank Isn't Profit",
     chip: "Money In The Bank",
-    cover: {image: "bank.png", headline: [[{t: "Money in the bank"}], [{t: "isn't profit."}]]},
+    cover: {image: "bank.jpg", headline: [[{t: "Money in the bank"}], [{t: "isn't profit."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "That balance "}, {t: "owes", g: true}], [{t: "taxes, payroll,"}], [{t: "and vendors."}]]},
       {dur: 1, fontSize: 96, lines: [[{t: "You spent money"}], [{t: "that was "}, {t: "never yours.", g: true}]]},
@@ -37,7 +37,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-revenue-vanity",
     title: "Revenue Is Vanity",
     chip: "Revenue vs. Cash",
-    cover: {image: "revenue-vanity.png", headline: [[{t: "Revenue is vanity."}], [{t: "Cash is survival."}]]},
+    cover: {image: "revenue-vanity.jpg", headline: [[{t: "Revenue is vanity."}], [{t: "Cash is survival."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "Big sales feel great"}], [{t: "until payroll", g: true}], [{t: "clears."}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "You chased the top"}], [{t: "line and "}, {t: "starved", g: true}], [{t: "the bottom."}]]},
@@ -50,7 +50,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-profit-opinion",
     title: "Profit Is An Opinion",
     chip: "Profit Is An Opinion",
-    cover: {image: "profit-opinion.png", headline: [[{t: "Profit is an opinion."}], [{t: "Cash is a fact."}]]},
+    cover: {image: "profit-opinion.jpg", headline: [[{t: "Profit is an opinion."}], [{t: "Cash is a fact."}]]},
     slides: [
       {dur: 1, fontSize: 92, lines: [[{t: "Your P&L can smile"}], [{t: "while your account"}], [{t: "cries.", g: true}]]},
       {dur: 1, fontSize: 96, lines: [[{t: "Accrual math "}, {t: "hid", g: true}], [{t: "a cash-flow"}], [{t: "problem."}]]},
@@ -63,7 +63,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-pricing",
     title: "You're Guessing",
     chip: "You're Guessing",
-    cover: {image: "pricing.png", headline: [[{t: "You're not too"}], [{t: "expensive."}], [{t: "You're guessing."}]]},
+    cover: {image: "pricing.jpg", headline: [[{t: "You're not too"}], [{t: "expensive."}], [{t: "You're guessing."}]]},
     slides: [
       {dur: 1, fontSize: 92, lines: [[{t: "A price from your gut"}], [{t: "isn't a strategy.", g: true}]]},
       {dur: 1, fontSize: 96, lines: [[{t: "You've been"}], [{t: "underpricing", g: true}], [{t: "to feel safe."}]]},
@@ -76,7 +76,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-taxes",
     title: "The IRS Isn't A Surprise",
     chip: "The IRS Isn't A Surprise",
-    cover: {image: "taxes.png", headline: [[{t: "The IRS isn't"}], [{t: "a surprise."}], [{t: "You didn't look."}]]},
+    cover: {image: "taxes.jpg", headline: [[{t: "The IRS isn't"}], [{t: "a surprise."}], [{t: "You didn't look."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "The bill was always"}], [{t: "coming. You"}], [{t: "looked away.", g: true}]]},
       {dur: 1, fontSize: 96, lines: [[{t: "You spent the"}], [{t: "tax money", g: true}], [{t: "in March."}]]},
@@ -89,7 +89,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-subscriptions",
     title: "Subscribed To Broke",
     chip: "Subscribed To Broke",
-    cover: {image: "subscriptions.png", headline: [[{t: "You're subscribed"}], [{t: "to being broke."}]]},
+    cover: {image: "subscriptions.jpg", headline: [[{t: "You're subscribed"}], [{t: "to being broke."}]]},
     slides: [
       {dur: 1, fontSize: 100, lines: [[{t: "Nine tools."}], [{t: "You use "}, {t: "three.", g: true}]]},
       {dur: 1, fontSize: 96, lines: [[{t: "You forgot", g: true}], [{t: "you were paying"}], [{t: "for half."}]]},
@@ -102,7 +102,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-owner-pay",
     title: "Everyone But You",
     chip: "Everyone But You",
-    cover: {image: "owner-pay.png", headline: [[{t: "Everyone got paid."}], [{t: "Except you."}]]},
+    cover: {image: "owner-pay.jpg", headline: [[{t: "Everyone got paid."}], [{t: "Except you."}]]},
     slides: [
       {dur: 1, fontSize: 92, lines: [[{t: "Owner pay is not"}], [{t: "'whatever's left.'", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "You funded the"}], [{t: "business with your"}], [{t: "own paycheck.", g: true}]]},
@@ -115,7 +115,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-growth-trap",
     title: "You Scaled The Chaos",
     chip: "You Scaled The Chaos",
-    cover: {image: "growth-trap.png", headline: [[{t: "You scaled the chaos,"}], [{t: "not the profit."}]]},
+    cover: {image: "growth-trap.jpg", headline: [[{t: "You scaled the chaos,"}], [{t: "not the profit."}]]},
     slides: [
       {dur: 1, fontSize: 96, lines: [[{t: "Double the revenue,"}], [{t: "double the mess.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "You grew everything"}], [{t: "but the "}, {t: "bank balance.", g: true}]]},
@@ -128,7 +128,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-discount",
     title: "Every Discount Is A Tip",
     chip: "Every Discount Is A Tip",
-    cover: {image: "discount.png", headline: [[{t: "Every discount is a tip"}], [{t: "you paid"}], [{t: "the customer."}]]},
+    cover: {image: "discount.jpg", headline: [[{t: "Every discount is a tip"}], [{t: "you paid"}], [{t: "the customer."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "10% off can be"}], [{t: "40% of", g: true}], [{t: "your margin.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "You discounted to"}], [{t: "close, and closed"}], [{t: "on "}, {t: "a loss.", g: true}]]},
@@ -141,7 +141,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-shoebox",
     title: "The Shoebox Isn't A Strategy",
     chip: "The Shoebox Isn't A Strategy",
-    cover: {image: "shoebox.png", headline: [[{t: "The shoebox"}], [{t: "isn't a strategy."}]]},
+    cover: {image: "shoebox.jpg", headline: [[{t: "The shoebox"}], [{t: "isn't a strategy."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "A year of receipts"}], [{t: "is "}, {t: "not bookkeeping.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "You're deciding"}], [{t: "blind", g: true}, {t: " for"}], [{t: "eleven months."}]]},
@@ -154,7 +154,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-friday",
     title: "Broke On Friday",
     chip: "Broke On Friday",
-    cover: {image: "friday.png", headline: [[{t: "Profitable on paper."}], [{t: "Broke on Friday."}]]},
+    cover: {image: "friday.jpg", headline: [[{t: "Profitable on paper."}], [{t: "Broke on Friday."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "Profit and cash"}], [{t: "don't arrive"}], [{t: "the same day.", g: true}]]},
       {dur: 1, fontSize: 96, lines: [[{t: "You made money"}], [{t: "you "}, {t: "can't touch", g: true}], [{t: "yet."}]]},
@@ -167,7 +167,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-cant-see",
     title: "Can't Cut What You Can't See",
     chip: "You Can't See It",
-    cover: {image: "cant-see.png", headline: [[{t: "You can't cut"}], [{t: "what you can't see."}]]},
+    cover: {image: "cant-see.jpg", headline: [[{t: "You can't cut"}], [{t: "what you can't see."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "You can't fix"}], [{t: "a number you"}], [{t: "never look at.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "The waste has"}], [{t: "been hiding in"}], [{t: "plain sight.", g: true}]]},
@@ -180,7 +180,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-margin",
     title: "Margin Feeds Your Family",
     chip: "Margin Feeds Your Family",
-    cover: {image: "margin.png", headline: [[{t: "Revenue feeds ego."}], [{t: "Margin feeds"}], [{t: "your family."}]]},
+    cover: {image: "margin.jpg", headline: [[{t: "Revenue feeds ego."}], [{t: "Margin feeds"}], [{t: "your family."}]]},
     slides: [
       {dur: 1, fontSize: 98, lines: [[{t: "Nobody", g: true}, {t: " takes"}], [{t: "home revenue."}]]},
       {dur: 1, fontSize: 92, lines: [[{t: "You bragged about"}], [{t: "sales and "}, {t: "skipped", g: true}], [{t: "a paycheck.", g: true}]]},
@@ -193,7 +193,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-forecast",
     title: "Hope Is Not A Forecast",
     chip: "Hope Is Not A Forecast",
-    cover: {image: "forecast.png", headline: [[{t: "Hope is not"}], [{t: "a forecast."}]]},
+    cover: {image: "forecast.jpg", headline: [[{t: "Hope is not"}], [{t: "a forecast."}]]},
     slides: [
       {dur: 1, fontSize: 96, lines: [[{t: "'It'll pick up'"}], [{t: "is "}, {t: "not a plan.", g: true}]]},
       {dur: 1, fontSize: 92, lines: [[{t: "You fly into every"}], [{t: "slow season"}], [{t: "blind.", g: true}]]},
@@ -206,7 +206,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-late-invoices",
     title: "Your Clients' Free Bank",
     chip: "Your Clients' Free Bank",
-    cover: {image: "late-invoices.png", headline: [[{t: "Your clients use you"}], [{t: "as a bank."}]]},
+    cover: {image: "late-invoices.jpg", headline: [[{t: "Your clients use you"}], [{t: "as a bank."}]]},
     slides: [
       {dur: 1, fontSize: 96, lines: [[{t: "Net 30 became"}], [{t: "net "}, {t: "whenever.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "You financed their"}], [{t: "business with"}], [{t: "yours.", g: true}]]},
@@ -219,7 +219,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-breakeven",
     title: "You Don't Know Break-Even",
     chip: "You Don't Know Break-Even",
-    cover: {image: "breakeven.png", headline: [[{t: "You don't know"}], [{t: "your break-even."}]]},
+    cover: {image: "breakeven.jpg", headline: [[{t: "You don't know"}], [{t: "your break-even."}]]},
     slides: [
       {dur: 1, fontSize: 98, lines: [[{t: "So every sale"}], [{t: "is "}, {t: "a guess.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "Some months you"}], [{t: "worked just to"}], [{t: "stay flat.", g: true}]]},
@@ -232,7 +232,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-reinvest",
     title: "The Truck Didn't Buy You Anything",
     chip: "It Didn't Buy You Anything",
-    cover: {image: "reinvest.png", headline: [[{t: "You bought the truck."}], [{t: "It bought you"}], [{t: "nothing."}]]},
+    cover: {image: "reinvest.jpg", headline: [[{t: "You bought the truck."}], [{t: "It bought you"}], [{t: "nothing."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "New gear feels like"}], [{t: "growth. It's "}, {t: "a bill.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "You reinvested into"}], [{t: "more overhead.", g: true}]]},
@@ -245,7 +245,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-contractor-eulogy",
     title: "Margin At Year-End Is A Eulogy",
     chip: "6 Tips For Job Costing",
-    cover: {image: "contractor-eulogy.png", headline: [[{t: "Margin found"}], [{t: "at year-end"}], [{t: "is a eulogy."}]]},
+    cover: {image: "contractor-eulogy.jpg", headline: [[{t: "Margin found"}], [{t: "at year-end"}], [{t: "is a eulogy."}]]},
     slides: [
       {dur: 1, fontSize: 92, lines: [[{t: "A job you can't"}], [{t: "measure is a job"}], [{t: "you "}, {t: "can't price.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "You bid the next one"}], [{t: "off "}, {t: "a feeling.", g: true}]]},
@@ -258,7 +258,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-restaurant",
     title: "Full Tables, Empty Account",
     chip: "Full Tables, Empty Account",
-    cover: {image: "restaurant.png", headline: [[{t: "Full tables."}], [{t: "Empty account."}]]},
+    cover: {image: "restaurant.jpg", headline: [[{t: "Full tables."}], [{t: "Empty account."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "A packed room can"}], [{t: "still "}, {t: "lose money.", g: true}]]},
       {dur: 1, fontSize: 96, lines: [[{t: "Food and labor"}], [{t: "ate", g: true}, {t: " the whole"}], [{t: "night."}]]},
@@ -271,7 +271,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-ecom",
     title: "Sold Out, Still Lost",
     chip: "Sold Out, Still Lost",
-    cover: {image: "ecom.png", headline: [[{t: "Sold out."}], [{t: "Still lost money."}]]},
+    cover: {image: "ecom.jpg", headline: [[{t: "Sold out."}], [{t: "Still lost money."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "Ads, fees, shipping"}], [{t: "ate the margin.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "You celebrated"}], [{t: "revenue you"}], [{t: "never kept.", g: true}]]},
@@ -284,7 +284,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-salon",
     title: "Booked Solid, Broke Solid",
     chip: "Booked Solid, Broke Solid",
-    cover: {image: "salon.png", headline: [[{t: "Booked solid."}], [{t: "Broke solid."}]]},
+    cover: {image: "salon.jpg", headline: [[{t: "Booked solid."}], [{t: "Broke solid."}]]},
     slides: [
       {dur: 1, fontSize: 92, lines: [[{t: "A full chair isn't"}], [{t: "a "}, {t: "full bank account.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "Product and rent"}], [{t: "quietly "}, {t: "took the tips.", g: true}]]},
@@ -297,7 +297,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-agency",
     title: "Great Work, Terrible Margins",
     chip: "Great Work, Terrible Margins",
-    cover: {image: "agency.png", headline: [[{t: "Great work."}], [{t: "Terrible margins."}]]},
+    cover: {image: "agency.jpg", headline: [[{t: "Great work."}], [{t: "Terrible margins."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "Scope crept and"}], [{t: "nobody billed it.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "You "}, {t: "over-delivered", g: true}], [{t: "your profit"}], [{t: "away."}]]},
@@ -310,7 +310,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-trucking",
     title: "The Truck Moved, Money Didn't",
     chip: "The Money Didn't Move",
-    cover: {image: "trucking.png", headline: [[{t: "The truck moved."}], [{t: "The money didn't."}]]},
+    cover: {image: "trucking.jpg", headline: [[{t: "The truck moved."}], [{t: "The money didn't."}]]},
     slides: [
       {dur: 1, fontSize: 92, lines: [[{t: "Fuel, maintenance,"}], [{t: "deadhead "}, {t: "ate the rate.", g: true}]]},
       {dur: 1, fontSize: 96, lines: [[{t: "You ran loaded miles"}], [{t: "for "}, {t: "a loss.", g: true}]]},
@@ -323,7 +323,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-dental",
     title: "Full Schedule, Thin Profit",
     chip: "Full Schedule, Thin Profit",
-    cover: {image: "dental.png", headline: [[{t: "Full schedule."}], [{t: "Thin profit."}]]},
+    cover: {image: "dental.jpg", headline: [[{t: "Full schedule."}], [{t: "Thin profit."}]]},
     slides: [
       {dur: 1, fontSize: 98, lines: [[{t: "Production"}], [{t: "isn't "}, {t: "collection.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "Insurance write-offs"}], [{t: "quietly "}, {t: "bled you.", g: true}]]},
@@ -336,7 +336,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-gym",
     title: "Members Up, Cash Down",
     chip: "Members Up, Cash Down",
-    cover: {image: "gym.png", headline: [[{t: "Members up."}], [{t: "Cash down."}]]},
+    cover: {image: "gym.jpg", headline: [[{t: "Members up."}], [{t: "Cash down."}]]},
     slides: [
       {dur: 1, fontSize: 92, lines: [[{t: "Sign-ups aren't the"}], [{t: "same as "}, {t: "kept members.", g: true}]]},
       {dur: 1, fontSize: 98, lines: [[{t: "Churn", g: true}, {t: " ate every"}], [{t: "new join."}]]},
@@ -349,7 +349,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-realestate",
     title: "Commission Rich, Cash Poor",
     chip: "Commission Rich, Cash Poor",
-    cover: {image: "realestate.png", headline: [[{t: "Commission rich."}], [{t: "Cash poor."}]]},
+    cover: {image: "realestate.jpg", headline: [[{t: "Commission rich."}], [{t: "Cash poor."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "Big checks, months"}], [{t: "apart, "}, {t: "spent fast.", g: true}]]},
       {dur: 1, fontSize: 96, lines: [[{t: "You lived on"}], [{t: "the last closing.", g: true}]]},
@@ -362,7 +362,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-solo",
     title: "A Job, Not A Business",
     chip: "A Job, Not A Business",
-    cover: {image: "solo.png", headline: [[{t: "You gave yourself"}], [{t: "a job, not"}], [{t: "a business."}]]},
+    cover: {image: "solo.jpg", headline: [[{t: "You gave yourself"}], [{t: "a job, not"}], [{t: "a business."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "If it stops when"}], [{t: "you stop, it's"}], [{t: "a job.", g: true}]]},
       {dur: 1, fontSize: 94, lines: [[{t: "You never paid"}], [{t: "yourself a "}, {t: "real wage.", g: true}]]},
@@ -375,7 +375,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-retail",
     title: "Where'd It Go",
     chip: "Where'd It Go?",
-    cover: {image: "retail.png", headline: [[{t: "Great month."}], [{t: "Where'd it go?"}]]},
+    cover: {image: "retail.jpg", headline: [[{t: "Great month."}], [{t: "Where'd it go?"}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "Sales were up."}], [{t: "Cash "}, {t: "vanished", g: true}], [{t: "anyway."}]]},
       {dur: 1, fontSize: 92, lines: [[{t: "Inventory ate the"}], [{t: "profit and "}, {t: "sat", g: true}], [{t: "on a shelf.", g: true}]]},
@@ -388,7 +388,7 @@ export const CAROUSELS: CarouselData[] = [
     id: "carousel-trades",
     title: "Bid In Your Head",
     chip: "You Bid It In Your Head",
-    cover: {image: "trades.png", headline: [[{t: "Bid in your head."}], [{t: "Paid from"}], [{t: "your wallet."}]]},
+    cover: {image: "trades.jpg", headline: [[{t: "Bid in your head."}], [{t: "Paid from"}], [{t: "your wallet."}]]},
     slides: [
       {dur: 1, fontSize: 94, lines: [[{t: "A number you didn't"}], [{t: "write down is"}], [{t: "a guess.", g: true}]]},
       {dur: 1, fontSize: 96, lines: [[{t: "You "}, {t: "ate", g: true}, {t: " the parts,"}], [{t: "the drive,"}], [{t: "and the redo."}]]},
